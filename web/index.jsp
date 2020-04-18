@@ -3,33 +3,45 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
     <title></title>
   </head>
-  <body bgcolor="#a9a9a9">
+  <body>
 
   <%
     SimpleDateFormat simpleDateFormat= new SimpleDateFormat("yyyy-MM-dd");
     %>
-  <h1 align="center">
-    Autor projetku: Sood Arun
-  </h1>
-  <h1 align="center">
-    Aktualna data: <%= simpleDateFormat.format(new Date())%>
-  </h1>
-  <form method="post" action="MyServlet?command=brak">
-    <h3>Wpisz swoje imię</h3>
-      <input type="text" name="name" value=""  style="font-size: 25px">
-
-    <h3 >Wpisz swoje nazwisko</h3>
-      <input type="text" name="surname" value="" style="font-size: 25px">
 
 
-    <p>
-      <button type="submit"  style="width: 315px; height: 40px; background-color: lawngreen" > Przywitaj się :)</button>
-    </p>
+    <nav class="navbar navbar-dark bg-dark" >
+      <a class="navbar-brand" href="#"> Autor projetku: Sood Arun</a>
+      <span class="navbar-text">
+      Aktualna data: <%= simpleDateFormat.format(new Date())%>
+    </span>
+    </nav>
 
+  <div class="row justify-content-md-center mt-5" >
+    <h3>Witaj!</h3>
+  </div>
 
-  </form>
-  </form>
+  <div class="row justify-content-md-center mt-5"  >
+      <form action="ServletValidate" method="post">
+        <div class="form-group">
+          <label for="login">Login</label>
+          <input type="login" class="form-control" id="login" name="login" aria-describedby="emailHelp" placeholder=" Login">
+
+        </div>
+        <div class="form-group">
+          <label for="password">Hasło</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Hasło">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Zaloguj się</button>
+      </form>
+  </div>
+
   </body>
 </html>
