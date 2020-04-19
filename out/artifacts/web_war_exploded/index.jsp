@@ -17,7 +17,7 @@
 
 
     <nav class="navbar navbar-dark bg-dark" >
-      <a class="navbar-brand" href="#"> Autor projetku: Sood Arun</a>
+      <a class="navbar-brand" href="#"> Autor projetku: Sood Arun  login:"login" , hasło: "haslo"</a>
       <span class="navbar-text">
       Aktualna data: <%= simpleDateFormat.format(new Date())%>
     </span>
@@ -28,11 +28,11 @@
   </div>
 
   <div class="row justify-content-md-center mt-5"  >
-      <form action="ServletValidate" method="post">
+      <form action="Login" method="post">
         <div class="form-group">
           <label for="login">Login</label>
           <input type="login" class="form-control" id="login" name="login" aria-describedby="emailHelp" placeholder=" Login">
-         
+
         </div>
         <div class="form-group">
           <label for="password">Hasło</label>
