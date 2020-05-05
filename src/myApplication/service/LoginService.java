@@ -1,23 +1,22 @@
 package myApplication.service;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import myApplication.db.DbUtils;
+
+import java.sql.*;
 
 
 public class LoginService {
 
     String sql = "select * from users where login=? and hasło=?";
-    String url = "jdbc:mysql://localhost:3306/bazatss";
-    String username = "root";
-    String password = "";
+
 
     public boolean check(String login, String pass) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(url, username, password);
+
+            Connection connection = DbUtils.getConnectionFromContext("mysql");
             PreparedStatement st = connection.prepareStatement(sql);
+
+
             st.setString(1, login);
             st.setString(2, pass);
             ResultSet rs = st.executeQuery();

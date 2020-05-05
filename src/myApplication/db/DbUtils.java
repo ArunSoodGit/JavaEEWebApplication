@@ -8,19 +8,6 @@ import java.sql.*;
 public class DbUtils {
 
 
-    // String sql = "select * from users where login=? and hasło=?";
-
-
-    public static PreparedStatement getPreparedStatment(String sql) throws ClassNotFoundException, SQLException {
-
-        Connection connection = getConnectionFromContext("mysql");
-        PreparedStatement ps = connection.prepareStatement("SELECT * FROM user");
-
-
-        return ps;
-
-    }
-
     public static java.sql.Connection getConnectionFromContext(String serwerType) throws SQLException {
 
         try {

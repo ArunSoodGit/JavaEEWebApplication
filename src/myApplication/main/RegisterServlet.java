@@ -22,6 +22,7 @@ public class RegisterServlet extends HttpServlet {
         surname = request.getParameter("nazwisko");
         User user = new User(id,user_login,password,name,surname);
         da.addNew(user);
+        response.sendRedirect("UsersServlet");
 
     }
 

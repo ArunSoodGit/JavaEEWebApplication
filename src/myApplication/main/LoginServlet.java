@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
             ServletContext context = request.getServletContext();
             context.setAttribute("login",user_login);
             session.setAttribute("login",user_login);
-            response.sendRedirect("UsersServlet");
+            response.sendRedirect("welcome.jsp");
         }
         else{
             response.sendRedirect("index.jsp");

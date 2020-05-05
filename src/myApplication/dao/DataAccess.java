@@ -10,7 +10,20 @@ import java.util.List;
 public class DataAccess {
 
     public void addNew(User user) {
+        try {
+            Connection connection = DbUtils.getConnectionFromContext("mysql");
+            String sql = "insert into users values(?,?,?,?,?)";
 
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1,user.getId());
+            ps.setString(2,user.getLogin());
+            ps.setString(3,user.getPassword());
+            ps.setString(4,user.getName());
+            ps.setString(5,user.getSurname());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static List<User> getAll(){
