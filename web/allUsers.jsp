@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: arun1
+  myApplication.models.User: arun1
   Date: 19.04.2020
   Time: 16:22
   To change this template use File | Settings | File Templates.
@@ -18,25 +18,31 @@
     <title>All users</title>
 </head>
 <body>
-<caption><h2>List of users</h2></caption>
+<caption><h2>Lista użytkowników</h2></caption>
+<a href="register.jsp">
+    <button class="btn-success">Dodaj</button>
+</a>
 <table class="table">
 
 
     <thead class="thead-dark">
     <tr>
         <th scope="col">Id</th>
+        <th scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
         <th scope="col">Login</th>
         <th scope="col">Hasło</th>
-        <th scope="col">Imię</th>
+
     </tr>
 
         <c:forEach var="items" items="${userList}">
             <tr>
                 <td >${items.id}</td>
-
+                <td> ${items.name}</td>
+                <td> ${items.surname}</td>
                 <td>${items.login}</td>
                 <td>${items.password}</td>
-                <td> ${items.name}</td>
+
             </tr>
 
 

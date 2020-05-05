@@ -1,6 +1,6 @@
-package myApplication;
+package myApplication.main;
 
-import myApplication.db.UserDbUtil;
+import myApplication.dao.DataAccess;
 import myApplication.models.User;
 
 import javax.servlet.RequestDispatcher;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet( "/UsersServlet")
@@ -20,14 +19,8 @@ public class UsersServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            List<User> userList =  UserDbUtil.getUserList();
-            request.setAttribute("userList",userList);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        List<User> userList = DataAccess.getAll();
+        request.setAttribute("userList",userList);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("allUsers.jsp");
         dispatcher.forward(request,response);

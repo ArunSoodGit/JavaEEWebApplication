@@ -1,6 +1,6 @@
 package myApplication.main;
 
-import myApplication.LoginService;
+import myApplication.service.LoginService;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/Login")
-public class ServletLogin extends HttpServlet {
+public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         LoginService loginService = new LoginService();

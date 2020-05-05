@@ -1,13 +1,11 @@
-package myApplication;
+package myApplication.service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-
-public class LoginService {
-
+public class RegisterService {
     String sql = "select * from users where login=? and hasło=?";
     String url = "jdbc:mysql://localhost:3306/bazatss";
     String username = "root";

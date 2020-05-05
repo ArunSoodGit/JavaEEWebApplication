@@ -40,7 +40,13 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Zaloguj się</button>
+        <div>
+          <a href="register.jsp">Nie masz konta ? Zarejestruj się !</a>
+        </div>
+
+
       </form>
+
   </div>
 
   </body>
