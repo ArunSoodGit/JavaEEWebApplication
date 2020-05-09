@@ -1,7 +1,9 @@
 package myApplication.main;
 
+import myApplication.db.CryptoUtil;
 import myApplication.service.LoginService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,14 +25,18 @@ public class LoginServlet extends HttpServlet {
         user_login = request.getParameter("login");
         password = request.getParameter("password");
 
+
         if (loginService.check(user_login,password)) {
             HttpSession session = request.getSession();
             ServletContext context = request.getServletContext();
             context.setAttribute("login",user_login);
             session.setAttribute("login",user_login);
-            response.sendRedirect("welcome.jsp");
+            RequestDispatcher view = request.getRequestDispatcher("welcome.jsp");
+            view.forward(request,response);
         }
         else{
+            request.setAttribute("message","Niepoprawne dane");
+
             response.sendRedirect("index.jsp");
         }
 

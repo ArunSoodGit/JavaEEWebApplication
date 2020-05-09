@@ -16,14 +16,15 @@
     <title>Welcome</title>
 </head>
 <body>
-
+<<h1>You have successfully logged-in</h1>
+<a href="logout.jsp" >Click to Logout </a>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-    <a class="navbar-brand" href="#"> Witaj</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#"> HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="UsersServlet">Baza użytkowników<span class="sr-only">(current)</span></a>
             </li>
@@ -37,7 +38,12 @@
                 <a class="navbar-text " >Aktualna data: <%= simpleDateFormat.format(new Date())%> </a>
             </li>
         </ul>
+        <span class="navbar-text">
+      Zalogowano jako: #{user.name}
+    </span>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </div>
 </nav>
+
 </body>
 </html>

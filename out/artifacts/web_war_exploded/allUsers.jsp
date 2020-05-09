@@ -27,7 +27,7 @@
 
     <thead class="thead-dark">
     <tr>
-        <th scope="col">Id</th>
+
         <th scope="col">Imię</th>
         <th scope="col">Nazwisko</th>
         <th scope="col">Login</th>
@@ -37,7 +37,7 @@
 
         <c:forEach var="items" items="${userList}">
             <tr>
-                <td >${items.id}</td>
+
                 <td> ${items.name}</td>
                 <td> ${items.surname}</td>
                 <td>${items.login}</td>

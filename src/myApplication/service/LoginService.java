@@ -1,5 +1,6 @@
 package myApplication.service;
 
+import myApplication.db.CryptoUtil;
 import myApplication.db.DbUtils;
 
 import java.sql.*;
@@ -16,7 +17,7 @@ public class LoginService {
             Connection connection = DbUtils.getConnectionFromContext("mysql");
             PreparedStatement st = connection.prepareStatement(sql);
 
-
+            pass = CryptoUtil.encode(pass);
             st.setString(1, login);
             st.setString(2, pass);
             ResultSet rs = st.executeQuery();

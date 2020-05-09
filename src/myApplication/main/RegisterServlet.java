@@ -1,6 +1,7 @@
 package myApplication.main;
 
 import myApplication.dao.DataAccess;
+import myApplication.db.CryptoUtil;
 import myApplication.models.User;
 
 import javax.servlet.ServletException;
@@ -14,13 +15,15 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DataAccess da = new DataAccess();
-        int id=0;
+
         String user_login, password,name,surname;
+
         user_login = request.getParameter("login");
         password = request.getParameter("password");
+        password = CryptoUtil.encode(password);
         name = request.getParameter("imie");
         surname = request.getParameter("nazwisko");
-        User user = new User(id,user_login,password,name,surname);
+        User user = new User(user_login,password,name,surname);
         da.addNew(user);
         response.sendRedirect("UsersServlet");
 

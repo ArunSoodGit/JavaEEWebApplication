@@ -1,27 +1,22 @@
 package myApplication.models;
 
 public class User {
-    private int id;
     private String login;
     private String password;
     private String name;
     private String surname;
 
-    public User(int id, String login, String password, String name, String surname) {
-        this.id = id;
+    public User( String login, String password, String name, String surname) {
+
         this.login = login;
         this.password = password;
         this.name = name;
         this.surname = surname;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
+
 
     public String getLogin() {
         return login;

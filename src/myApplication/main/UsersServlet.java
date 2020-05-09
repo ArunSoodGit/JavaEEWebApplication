@@ -22,6 +22,7 @@ public class UsersServlet extends HttpServlet {
         List<User> userList = DataAccess.getAll();
         request.setAttribute("userList",userList);
 
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("allUsers.jsp");
         dispatcher.forward(request,response);
     }
