@@ -16,15 +16,18 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DataAccess da = new DataAccess();
 
-        String user_login, password,name,surname;
+        String name,surname,mark, model;
+        int user_id=0;
 
-        user_login = request.getParameter("login");
-        password = request.getParameter("password");
-        password = CryptoUtil.encode(password);
+
+       // password = CryptoUtil.encode(password);
         name = request.getParameter("imie");
         surname = request.getParameter("nazwisko");
-        User user = new User(user_login,password,name,surname);
+        mark = request.getParameter("marka");
+        model = request.getParameter("model");
+        User user = new User(user_id,name,surname,mark,model);
         da.addNew(user);
+
         response.sendRedirect("UsersServlet");
 
     }

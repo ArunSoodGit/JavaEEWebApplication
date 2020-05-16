@@ -15,19 +15,18 @@
     SimpleDateFormat simpleDateFormat= new SimpleDateFormat("yyyy-MM-dd");
 %>
 
-
+<% session.invalidate(); %>
 <nav class="navbar navbar-dark bg-dark" >
-    <a class="navbar-brand" href="#"> Autor projetku: Sood Arun  login:"login" , hasło: "haslo"</a>
-    <span class="navbar-text">
+    <a class="navbar-brand" href="index.jsp"> <img src="img/logo3.png" width="60" height=40/>
+        Arun Sood</a>
       Aktualna data: <%= simpleDateFormat.format(new Date())%>
     </span>
+    <a href="index.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Zaloguj się</button> </a>
 </nav>
 
-<div class="row justify-content-md-center mt-5" >
-    <h3>Pomyślnie wylogowano !</h3>
+<div class="alert alert-success text-center" role="alert">
+     Pomyślnie wylogowano!
 </div>
-
-
 
 </body>
 </html>

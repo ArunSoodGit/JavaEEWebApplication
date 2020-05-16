@@ -1,37 +1,29 @@
 package myApplication.models;
 
 public class User {
-    private String login;
-    private String password;
+    private int id;
     private String name;
     private String surname;
+    private String mark;
+    private String model;
 
-    public User( String login, String password, String name, String surname) {
+    public User() {
+    }
 
-        this.login = login;
-        this.password = password;
+    public User(int id, String name, String surname, String mark, String model) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
+        this.mark = mark;
+        this.model = model;
     }
 
-
-
-
-
-    public String getLogin() {
-        return login;
+    public int getId() {
+        return id;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -41,11 +33,28 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getSurname() {
         return surname;
     }
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getMark() {
+        return mark;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }

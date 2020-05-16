@@ -19,32 +19,40 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-  <a class="navbar-brand" href="#"> HOME</a>
+  <a class="navbar-brand" href="index.jsp"> <img src="img/logo3.png" width="60" height=40/>
+    Arun Sood</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="UsersServlet">Baza użytkowników<span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: white" href="UsersServlet">Baza użytkowników<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" style="color: white" href="webSocket.jsp">Wykres</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" style="color: white" href="#">Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="navbar-text " >Aktualna data: <%= simpleDateFormat.format(new Date())%> </a>
+        <a  class="nav-link" >Aktualna data: <%= simpleDateFormat.format(new Date())%> </a>
       </li>
     </ul>
     <span class="navbar-text">
-      Zalogowano jako: <%   %>
+    Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px"><%=request.getUserPrincipal().getName()%></span>
+       <a href="logout.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
     </span>
-    <a href="logout.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
+
 
   </div>
 </nav>
-<h1>Pomyślnie zalogowano!</h1>
+<div class="alert alert-success text-center" role="alert">
+Witaj <%=request.getUserPrincipal().getName()%>! Pomyślnie zalogowano!
+</div>
+
+
+
+
 </body>
 </html>

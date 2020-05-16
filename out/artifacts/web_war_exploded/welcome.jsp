@@ -39,11 +39,10 @@
             </li>
         </ul>
         <span class="navbar-text">
-      Zalogowano jako: #{user.name}
+
     </span>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </div>
 </nav>
-
 </body>
 </html>
