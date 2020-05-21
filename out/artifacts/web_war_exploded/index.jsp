@@ -41,6 +41,7 @@
     </ul>
     <span class="navbar-text">
     Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px"><%=request.getUserPrincipal().getName()%></span>
+
        <a href="logout.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
     </span>
 

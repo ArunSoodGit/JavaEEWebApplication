@@ -36,11 +36,9 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>AplikacjaZasobyDostepZewZablokowany</web-resource-name>
-            <url-pattern>/DeleteServlet</url-pattern>
             <url-pattern>/LogoutServlet</url-pattern>
             <url-pattern>/RegisterServlet</url-pattern>
-            <url-pattern>/UsersServlet</url-pattern>
-            <url-pattern></url-pattern>
+            <url-pattern>/allUsers.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
 
@@ -54,6 +52,8 @@
             <web-resource-name>AplikacjaZasobyDostepZewZablokowany</web-resource-name>
             <url-pattern>/admin.jsp</url-pattern>
             <url-pattern>/index.jsp</url-pattern>
+
+            <url-pattern>/UsersServlet</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>

@@ -75,7 +75,7 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
                 <td>${items.surname}</td>
                 <td>${items.mark}</td>
                 <td>${items.model}</td>
-                <td><a href="DeleteServlet?login=${items.id}"><i class="fas fa-trash"></i></a></td>
+                <td><a href="DeleteServlet?id=${items.id}"><i class="fas fa-trash"></i></a></td>
             </tr>
 
 
