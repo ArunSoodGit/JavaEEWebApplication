@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="asm-all-repackaged-2.2.0-b21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/asm-all-repackaged-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/cglib-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/eclipselink.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/guava-14.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/hk2-api-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/hk2-locator-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/hk2-utils-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/javax.annotation-api-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/javax.inject-2.2.0-b21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/javax.servlet-api-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/javax.ws.rs-api-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jaxb-api-2.2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-client.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-container-servlet-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-container-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-entity-filtering-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-media-moxy-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/jersey-server.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/osgi-resource-locator-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/persistence-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/validation-api-1.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/org.osgi.core-4.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../tss/biblioteki/org.osgi.core-4.2.0.jar!/OSGI-OPT/src" />
+    </SOURCES>
+  </library>
+</component>
