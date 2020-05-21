@@ -43,9 +43,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Zaloguj się</button>
-                <div>
-                    <a href="newUser.jsp">Nie masz konta ? Zarejestruj się !</a>
-                </div>
+
 
             </form>
             </div>

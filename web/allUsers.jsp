@@ -51,21 +51,22 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
 
     </div>
 </nav>
+<div style="width:80%;margin-right: auto;margin-left: auto ">
+    <table class="table">
+        <a href="newUser.jsp">
+            <button class="btn btn-success" style="margin-top: 20px;margin-bottom: 20px"><i class="fas fa-user-plus"></i>Dodaj</button>
+        </a>
 
-<table class="table" style="width: 80%;margin-right: auto;margin-left: auto">
-    <a href="newUser.jsp">
-        <button class="btn btn-success" style="margin-top: 20px;margin-bottom: 20px">Dodaj</button>
-    </a>
-
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Imię</th>
-        <th scope="col">Nazwisko</th>
-        <th scope="col">Marka</th>
-        <th scope="col">Model</th>
-        <th scope="col"></th>
-    </tr>
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Imię</th>
+            <th scope="col">Nazwisko</th>
+            <th scope="col">Marka</th>
+            <th scope="col">Model</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
 
         <c:forEach var="items" items="${userList}">
             <tr>
@@ -75,15 +76,19 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
                 <td>${items.surname}</td>
                 <td>${items.mark}</td>
                 <td>${items.model}</td>
-                <td><a href="DeleteServlet?id=${items.id}"><i class="fas fa-trash"></i></a></td>
+                <td><a href="UpdateServlet?id=${items.id}"><i class="fas fa-user-edit"></i></a></td>
+                <td><a style="color: red" href="DeleteServlet?id=${items.id}"><i class="fas fa-trash"></i></a></td>
+
             </tr>
 
 
 
         </c:forEach>
 
-    </thead>
-</table>
+        </thead>
+    </table>
+</div>
+
 
 </body>
 </html>
