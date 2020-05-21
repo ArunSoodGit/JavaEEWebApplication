@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WebApplication2AS.iml" filepath="$PROJECT_DIR$/WebApplication2AS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/webSocket/webSocket.iml" filepath="$PROJECT_DIR$/webSocket/webSocket.iml" />
     </modules>
   </component>
 </project>
