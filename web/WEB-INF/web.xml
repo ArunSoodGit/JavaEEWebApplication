@@ -37,12 +37,12 @@
         <web-resource-collection>
             <web-resource-name>AplikacjaZasobyDostepZewZablokowany</web-resource-name>
             <url-pattern>/allUsers.jsp</url-pattern>
-            <url-pattern>/welcome.jsp</url-pattern>
             <url-pattern>/index.jsp</url-pattern>
             <url-pattern>/webSocket</url-pattern>
+            <url-pattern>/UsersServlet</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>admin</role-name>
+            <role-name>user</role-name>
         </auth-constraint>
         <user-data-constraint>
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
@@ -62,7 +62,7 @@
     </security-constraint>
 
     <security-role>
-        <role-name>tomcat</role-name>
+        <role-name>user</role-name>
 
     </security-role>
     <security-role>

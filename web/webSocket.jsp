@@ -132,7 +132,7 @@
                 <a class="nav-link" style="color: white" href="webSocket.jsp">Wykres</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="color: white" href="#">Pricing</a>
+                <a class="nav-link" style="color: white" href="rest/json">JSON</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link">Aktualna data: <%= simpleDateFormat.format(new Date())%>

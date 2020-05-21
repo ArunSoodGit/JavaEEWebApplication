@@ -32,7 +32,7 @@
                 <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" style="color: white" href="rest/json">JSON</a>
             </li>
             <li class="nav-item">
                 <a class="navbar-text " >Aktualna data: <%= simpleDateFormat.format(new Date())%> </a>

@@ -12,7 +12,7 @@ public class DataAccess {
     public void addNew(User user) {
         try {
             Connection connection = DbUtils.getConnectionFromContext("mysql");
-            String sql = "insert into users values(?,?,?,?,?)";
+            String sql = "insert into cars values(?,?,?,?,?)";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
