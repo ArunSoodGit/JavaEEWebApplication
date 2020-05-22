@@ -11,7 +11,7 @@ import java.io.IOException;
 
 import static java.lang.Integer.parseInt;
 
-@WebServlet("/DeleteServlet")
+@WebServlet("/DeleteUserServlet")
 public class DeleteUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

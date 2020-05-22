@@ -61,5 +61,51 @@ public class DataAccess {
         }
         return status;
     }
+    public boolean updateUser(User user) throws SQLException {
+       boolean rowUpdate = true;
+        try {
+            Connection connection = DbUtils.getConnectionFromContext("mysql");
+            String sql = "UPDATE cars SET imię=?, nazwisko=?, marka =?, model=? where id=?";
+
+            PreparedStatement ps = connection.prepareStatement(sql);
+
+            ps.setString(1,user.getName());
+            ps.setString(1,user.getSurname());
+            ps.setString(1,user.getMark());
+            ps.setString(1,user.getModel());
+          boolean rowUpdated =   ps.executeUpdate() > 0;
+    ps.close();
+    return rowUpdated;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    return rowUpdate;
+    }
+
+    public static User getUser(int id) throws SQLException {
+
+        User user = new User();
+
+
+        try {
+            Connection connection = DbUtils.getConnectionFromContext("mysql");
+            String sql = "SELECT * FROM cars where id=?";
+
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1,id);
+            ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    user= new User(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4),rs.getString(5));
+
+                }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+
 
 }

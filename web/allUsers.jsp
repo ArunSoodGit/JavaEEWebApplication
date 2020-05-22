@@ -68,16 +68,16 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
             <th scope="col"></th>
         </tr>
 
-        <c:forEach var="items" items="${userList}">
+        <c:forEach var="user" items="${userList}">
             <tr>
 
-                <td> ${items.id}</td>
-                <td> ${items.name}</td>
-                <td>${items.surname}</td>
-                <td>${items.mark}</td>
-                <td>${items.model}</td>
-                <td><a href="UpdateServlet?id=${items.id}"><i class="fas fa-user-edit"></i></a></td>
-                <td><a style="color: red" href="DeleteServlet?id=${items.id}"><i class="fas fa-trash"></i></a></td>
+                <td> ${user.id}</td>
+                <td> ${user.name}</td>
+                <td>${user.surname}</td>
+                <td>${user.mark}</td>
+                <td>${user.model}</td>
+                <td><a href="/UpdateUserServlet?id=${user.getId()}"><i class="fas fa-user-edit"></i></a></td>
+                <td><a style="color: red" href="DeleteUserServlet?id=${user.id}"><i class="fas fa-trash"></i></a></td>
 
             </tr>
 
