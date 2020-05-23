@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<h3>Login Error</h3>
-<a href="index.jsp">Click to Login Again</a>
+<h3>Niepoprwane dane!</h3>
+<a href="index.jsp">Zaloguj się ponownie</a>
 </body>
 </html>

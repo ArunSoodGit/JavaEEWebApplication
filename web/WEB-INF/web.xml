@@ -38,7 +38,8 @@
             <web-resource-name>AplikacjaZasobyDostepZewZablokowany</web-resource-name>
             <url-pattern>/LogoutServlet</url-pattern>
             <url-pattern>/RegisterServlet</url-pattern>
-            <url-pattern>/allUsers.jsp</url-pattern>
+            <url-pattern>/updateUser.jsp</url-pattern>
+            <url-pattern>/newUser.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
 
@@ -50,10 +51,23 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>AplikacjaZasobyDostepZewZablokowany</web-resource-name>
-            <url-pattern>/admin.jsp</url-pattern>
-            <url-pattern>/index.jsp</url-pattern>
 
+            <url-pattern>/index.jsp</url-pattern>
             <url-pattern>/UsersServlet</url-pattern>
+            <url-pattern>/allUsers.jsp</url-pattern>
+            <url-pattern>/webSocket.jsp</url-pattern>
+            <url-pattern>/logout.jsp</url-pattern>
+            <url-pattern>/login.jsp</url-pattern>
+
+            <url-pattern>/allUsers.jsp</url-pattern>
+            <url-pattern>/DeleteUserServlet</url-pattern>
+            <url-pattern>/UpdateUserServlet</url-pattern>
+            <url-pattern>/ImageServlet</url-pattern>
+            <url-pattern>/DetailUserServlet</url-pattern>
+            <url-pattern>/newUser.jsp</url-pattern>
+
+            <url-pattern>/admin.jsp</url-pattern>
+
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>

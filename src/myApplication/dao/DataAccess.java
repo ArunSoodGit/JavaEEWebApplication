@@ -70,9 +70,10 @@ public class DataAccess {
             PreparedStatement ps = connection.prepareStatement(sql);
 
             ps.setString(1,user.getName());
-            ps.setString(1,user.getSurname());
-            ps.setString(1,user.getMark());
-            ps.setString(1,user.getModel());
+            ps.setString(2,user.getSurname());
+            ps.setString(3,user.getMark());
+            ps.setString(4,user.getModel());
+            ps.setInt(5,user.getId());
           boolean rowUpdated =   ps.executeUpdate() > 0;
     ps.close();
     return rowUpdated;

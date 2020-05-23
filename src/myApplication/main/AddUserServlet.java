@@ -3,7 +3,9 @@ package myApplication.main;
 import myApplication.dao.DataAccess;
 import myApplication.db.CryptoUtil;
 import myApplication.models.User;
+import sun.plugin.com.Dispatcher;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +35,7 @@ public class AddUserServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("newUser.jsp");
+        dispatcher.forward(request,response);
     }
 }

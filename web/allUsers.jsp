@@ -45,7 +45,7 @@
         </ul>
         <span class="navbar-text">
 Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px"><%=request.getUserPrincipal().getName()%></span>
-       <a href="logout.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
+       <a href="logout.jsp" > <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
     </span>
 
 
@@ -53,7 +53,7 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
 </nav>
 <div style="width:80%;margin-right: auto;margin-left: auto ">
     <table class="table">
-        <a href="newUser.jsp">
+        <a href="Register">
             <button class="btn btn-success" style="margin-top: 20px;margin-bottom: 20px"><i class="fas fa-user-plus"></i>Dodaj</button>
         </a>
 
@@ -76,7 +76,7 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
                 <td>${user.surname}</td>
                 <td>${user.mark}</td>
                 <td>${user.model}</td>
-                <td><a href="/UpdateUserServlet?id=${user.getId()}"><i class="fas fa-user-edit"></i></a></td>
+                <td><a href="/DetailUserServlet?id=${user.getId()}"><i class="fas fa-user-edit"></i></a></td>
                 <td><a style="color: red" href="DeleteUserServlet?id=${user.id}"><i class="fas fa-trash"></i></a></td>
 
             </tr>

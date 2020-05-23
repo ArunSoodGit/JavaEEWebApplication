@@ -11,15 +11,13 @@
 </head>
 <body>
 
-<%
-    SimpleDateFormat simpleDateFormat= new SimpleDateFormat("yyyy-MM-dd");
-%>
+
 
 <% session.invalidate(); %>
 <nav class="navbar navbar-dark bg-dark" >
     <a class="navbar-brand" href="index.jsp"> <img src="img/logo3.png" width="60" height=40/>
         Arun Sood</a>
-      Aktualna data: <%= simpleDateFormat.format(new Date())%>
+
     </span>
     <a href="index.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Zaloguj się</button> </a>
 </nav>
