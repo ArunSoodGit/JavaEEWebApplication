@@ -52,7 +52,7 @@
 </div>
 
 <div class="row justify-content-md-center mt-5"  >
-    <form action="Register" method="post">
+    <form action="AddUserServlet" method="post">
         <div class="form-group">
             <label for="imie">Imię</label>
             <input type="text" class="form-control" id="imie" name="imie" aria-describedby="imie" placeholder=" Imię">

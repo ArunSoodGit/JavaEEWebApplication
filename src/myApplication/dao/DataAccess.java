@@ -4,6 +4,7 @@ import myApplication.db.DbUtils;
 import myApplication.models.User;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,12 +25,12 @@ public class DataAccess {
             ps.setString(5,user.getModel());
             ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+
         }
     }
 
     public static List<User> getAll(){
-        List<User> userList = new LinkedList<>();
+        List<User> userList = new ArrayList<>();
         try {
             Connection connection = DbUtils.getConnectionFromContext("mysql");
             Statement statement = connection.createStatement();
@@ -39,8 +40,9 @@ public class DataAccess {
                 User user= new User(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4),rs.getString(5));
                 userList.add(user);
             }
+            connection.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+
         }
         return userList;
     }
@@ -55,7 +57,7 @@ public class DataAccess {
             ps.setInt(1,id);
 
            status= ps.executeUpdate();
-
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -76,7 +78,9 @@ public class DataAccess {
             ps.setInt(5,user.getId());
           boolean rowUpdated =   ps.executeUpdate() > 0;
     ps.close();
+            connection.close();
     return rowUpdated;
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -100,7 +104,7 @@ public class DataAccess {
 
                 }
 
-
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -45,9 +45,7 @@
 
     function initWebSocket() {
         websocket = new WebSocket(wsUri);
-        websocket.onopen = function (evt) {
-            onOpen(evt);
-        };
+
         websocket.onmessage = function (evt) {
             onMessage(evt);
         };
@@ -57,9 +55,7 @@
         };
     }
 
-    function onOpen() {
-        writeToScreen("CONNCETED");
-    }
+
 
     function onMessage(evt) {
         // writeToScreen("RECEIVED" + evt.data);

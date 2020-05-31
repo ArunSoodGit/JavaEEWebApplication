@@ -3,9 +3,9 @@
     <Resource
             auth="Container"
             driverClassName="com.mysql.jdbc.Driver"
-            maxActive="100"
-            maxIdle="30"
-            maxWait="10000"
+            maxActive="10000"
+            maxIdle="30000"
+            maxWait="1000000"
             name="bazatss"
             username="root"
             password=""

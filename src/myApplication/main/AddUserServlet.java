@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/Register")
+@WebServlet("/AddUserServlet")
 public class AddUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         DataAccess da = new DataAccess();
@@ -29,13 +29,13 @@ public class AddUserServlet extends HttpServlet {
         model = request.getParameter("model");
         User user = new User(user_id,name,surname,mark,model);
         da.addNew(user);
+    response.sendRedirect("UsersServlet");
 
-        response.sendRedirect("UsersServlet");
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("newUser.jsp");
-        dispatcher.forward(request,response);
+       // RequestDispatcher dispatcher = request.getRequestDispatcher("newUser.jsp");
+       // dispatcher.forward(request,response);
     }
 }

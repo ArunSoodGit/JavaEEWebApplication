@@ -29,7 +29,7 @@ public class UpdateUserServlet extends HttpServlet {
         try {
             da.updateUser(user);
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+
         }
 
         response.sendRedirect("UsersServlet");

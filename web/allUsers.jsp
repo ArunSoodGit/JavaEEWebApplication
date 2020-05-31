@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-                <a class="nav-link" style="color: white" href="UsersServlet">Baza użytkowników<span class="sr-only">(current)</span></a>
+                <a class="nav-link" style="color: white" href="UsersServlet">Baza użytkowników<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"style="color: white" href="webSocket.jsp">Wykres</a>
@@ -53,13 +53,13 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
 </nav>
 <div style="width:80%;margin-right: auto;margin-left: auto ">
     <table class="table">
-        <a href="Register">
+        <a href="newUser.jsp">
             <button class="btn btn-success" style="margin-top: 20px;margin-bottom: 20px"><i class="fas fa-user-plus"></i>Dodaj</button>
         </a>
 
         <thead class="thead-dark">
         <tr>
-            <th scope="col">ID</th>
+
             <th scope="col">Imię</th>
             <th scope="col">Nazwisko</th>
             <th scope="col">Marka</th>
@@ -71,13 +71,13 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
         <c:forEach var="user" items="${userList}">
             <tr>
 
-                <td> ${user.id}</td>
+
                 <td> ${user.name}</td>
                 <td>${user.surname}</td>
                 <td>${user.mark}</td>
                 <td>${user.model}</td>
                 <td><a href="/DetailUserServlet?id=${user.getId()}"><i class="fas fa-user-edit"></i></a></td>
-                <td><a style="color: red" href="DeleteUserServlet?id=${user.id}"><i class="fas fa-trash"></i></a></td>
+                <td><a style="color: red" href="/DeleteUserServlet?id=${user.getId()}"><i class="fas fa-trash"></i></a></td>
 
             </tr>
 

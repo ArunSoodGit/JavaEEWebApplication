@@ -45,7 +45,7 @@
     <span class="navbar-text">
     Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px"><%=request.getUserPrincipal().getName()%></span>
 
-       <a href="logout.jsp" > <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
+       <a href="logout.jsp" > <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Wyloguj się</button> </a>
     </span>
 
 
@@ -54,6 +54,7 @@
 <div class="alert alert-success text-center" role="alert">
 Witaj <%=request.getUserPrincipal().getName()%>! Pomyślnie zalogowano!
 </div>
+<a href="/admin.jsp"> <button class="btn btn-outline-danger">Admin</button></a>
 <div style="margin-left: auto; margin-right: auto; width: 400px;height: 400px;margin-top: 40px">
   <c:set var="string1" value="Obrazek wygenerowany przez servlet ImageServlet"/>
   <c:set var="string2" value="${fn:toUpperCase(string1)}"/>
