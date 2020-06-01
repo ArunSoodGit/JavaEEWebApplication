@@ -20,8 +20,9 @@ public class UsersServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<User> userList = DataAccess.getAll();
-        request.setAttribute("userList",userList);
-
+       // request.setAttribute("userList",userList);
+      //  String sessionData = "Przykładowe dane sesji";
+        request.getSession().setAttribute("userList2",userList);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("allUsers.jsp");
         dispatcher.forward(request,response);

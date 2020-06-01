@@ -53,6 +53,7 @@
 </nav>
 <div class="alert alert-success text-center" role="alert">
 Witaj <%=request.getUserPrincipal().getName()%>! Pomyślnie zalogowano!
+
 </div>
 <a href="/admin.jsp"> <button class="btn btn-outline-danger">Admin panel</button></a>
 <div style="margin-left: auto; margin-right: auto; width: 400px;height: 400px;margin-top: 40px">

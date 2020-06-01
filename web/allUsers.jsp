@@ -68,7 +68,7 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
             <th scope="col"></th>
         </tr>
 
-        <c:forEach var="user" items="${userList}">
+        <c:forEach var="user" items="${userList2}">
             <tr>
 
 
@@ -87,8 +87,8 @@ Zalogowano jako:<span style="color: white;margin-right: 20px;margin-left: 10px">
 
         </thead>
     </table>
-</div>
 
+</div>
 
 </body>
 </html>
