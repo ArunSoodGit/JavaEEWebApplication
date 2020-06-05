@@ -53,8 +53,9 @@
 </nav>
 <div class="alert alert-success text-center" role="alert">
 Witaj <%=request.getUserPrincipal().getName()%>! Pomyślnie zalogowano!
+
 </div>
-<a href="/admin.jsp"> <button class="btn btn-outline-danger">Admin</button></a>
+<a href="/admin.jsp"> <button class="btn btn-outline-danger">Admin panel</button></a>
 <div style="margin-left: auto; margin-right: auto; width: 400px;height: 400px;margin-top: 40px">
   <c:set var="string1" value="Obrazek wygenerowany przez servlet ImageServlet"/>
   <c:set var="string2" value="${fn:toUpperCase(string1)}"/>

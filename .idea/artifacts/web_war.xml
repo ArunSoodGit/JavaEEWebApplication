@@ -5,16 +5,7 @@
       <element id="artifact" artifact-name="web:war exploded" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
-          <element id="library" level="project" name="mysql-connector-java-8.0.19" />
-          <element id="library" level="project" name="mysql-connector-java-5.1.41" />
-          <element id="library" level="project" name="javax.servlet.jsp.jstl-api-1.2.1" />
-          <element id="library" level="project" name="jstl-1.2" />
-          <element id="library" level="project" name="javax.servlet:jstl:1.2" />
-          <element id="library" level="project" name="Java-WebSocket-1.3.8" />
-          <element id="library" level="project" name="WebSocket-1.1" />
-          <element id="library" level="project" name="javax.annotation-api-1.2" />
-          <element id="library" level="project" name="WebSocket-1.1 (2)" />
-          <element id="library" level="project" name="asm-all-repackaged-2.2.0-b21" />
+          <element id="library" level="application" name="asm-all-repackaged-2.2.0-b21" />
         </element>
       </element>
     </root>
